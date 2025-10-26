@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 
 const PORT = process.env.PORT || 3000;
-const API_KEY = 'YOUR_ALPHA_VANTAGE_KEY'; // Replace with your Alpha Vantage API key
+const API_KEY = process.env.ALPHA_VANTAGE_KEY;
 
 // Endpoint for a stock symbol
 app.get('/stock/:symbol', async (req, res) => {
